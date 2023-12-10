@@ -114,8 +114,8 @@ export default function HomePage() {
               játékost:
             </li>
             <li>
-              Ügy kezeltem a helyzetet hogy az admin technikai hiba esetén
-              tudjon szelvényt megjátszani a felhasználó nevében.
+              Úgy értelmeztem a helyzetet hogy az admin -például technikai hiba
+              esetén- képes szelvényt megjátszani a felhasználó nevében.
             </li>
           </ul>
         )}
