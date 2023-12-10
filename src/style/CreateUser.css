@@ -1,0 +1,45 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+Form {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #054577;
+}
+
+Form label {
+  display: block;
+  margin-bottom: 8px;
+  color: #641515;
+}
+
+Form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+Form button {
+  background-color: #2980b9;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+Form button:hover {
+  background-color: #3498db;
+}
+
+Form p {
+  color: #e74c3c;
+  margin-top: 8px;
+}

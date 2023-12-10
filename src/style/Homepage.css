@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("D:/Lottokeeper/src/assets/logo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: opacityChange 10s infinite alternate;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@keyframes opacityChange {
+  from {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#otext {
+  color: rgb(0, 0, 0);
+  font-size: 10vw;
+  font-weight: bold;
+  text-align: center;
+  font-style: italic;
+  position: absolute;
+  right: 20%;
+  top: 40%;
+  background: linear-gradient(to right, #00ff00, #000000, #00ff00);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes spin-slow-x {
+  0% {
+    transform: rotateX(0deg);
+  }
+  50% {
+    transform: rotateX(90deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+@keyframes spin-slow-y {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(90deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+.overlay-text-animate-spin-slow-x {
+  animation: spin-slow-x 10s linear infinite alternate;
+}
+
+.overlay-text-animate-spin-slow-y {
+  animation: spin-slow-y 10s linear infinite alternate;
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.registration-button,
+.login-button {
+  padding: 15px 25px;
+  font-size: 18px;
+  margin-right: 10px;
+  cursor: pointer;
+  border: 2px solid #3498db;
+  background-color: #3498db;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.login-button {
+  background-color: #2ecc71;
+  border-color: #2ecc71;
+}
+.summary-container {
+  text-align: right;
+  margin-top: 20px;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  color: #fff;
+}
