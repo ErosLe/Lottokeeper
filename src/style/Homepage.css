@@ -40,6 +40,8 @@ body {
   -webkit-background-clip: text;
   color: transparent;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  opacity: 0.9;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 @keyframes spin-slow-x {
@@ -93,17 +95,71 @@ body {
   background-color: #3498db;
   color: #fff;
   border-radius: 8px;
+  transition: box-shadow 0.3s ease;
 }
-
+.registration-button:hover,
+.login-button:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
 .login-button {
   background-color: #2ecc71;
   border-color: #2ecc71;
 }
-.summary-container {
-  text-align: right;
+.summary-container-text-right {
+  list-style-type: none;
+  text-align: left;
   margin-top: 20px;
   position: absolute;
   top: 0;
   right: 20px;
   color: #fff;
+}
+.summary-container-text-right ul {
+  list-style-type: none;
+  padding: 0;
+}
+.summary-container-text-right ul li {
+  margin-bottom: 10px;
+}
+.summary-container-text-left {
+  list-style-type: none;
+  text-align: left;
+  margin-top: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 275px;
+  color: #000;
+}
+.summary-container-text-left ul {
+  list-style-type: none;
+  padding: 0;
+}
+.summary-container-text-left ul li {
+  margin-bottom: 10px;
+}
+.summary-container-questions {
+  list-style-type: none;
+  text-align: left;
+  margin-top: 20px;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  color: #071e69;
+}
+.summary-container-questions ul {
+  list-style-type: none;
+  padding: 0;
+}
+.summary-container-questions ul li {
+  margin-bottom: 10px;
+}
+h2 {
+  cursor: pointer;
+  text-decoration: underline;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+h2,
+li {
+  cursor: pointer;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }

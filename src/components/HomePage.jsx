@@ -8,6 +8,22 @@ export default function HomePage() {
   const [searched, setSearched] = useState(null);
   const [isXAnimation, setIsXAnimation] = useState(true);
 
+  const [isDoneListVisible, setIsDoneListVisible] = useState(false);
+
+  const toggleDoneListVisibility = () => {
+    setIsDoneListVisible((prev) => !prev);
+  };
+  const [isTodoListVisible, setIsTodoListVisible] = useState(false);
+
+  const toggleTodoListVisibility = () => {
+    setIsTodoListVisible((prev) => !prev);
+  };
+  const [isQuestionsListVisible, setIsQuestionsListVisible] = useState(false);
+
+  const toggleQuestionsListVisibility = () => {
+    setIsQuestionsListVisible((prev) => !prev);
+  };
+
   useEffect(() => {
     const interval = setInterval(() => {
       setIsXAnimation((prev) => !prev);
@@ -58,11 +74,51 @@ export default function HomePage() {
           Belépés
         </button>
       </div>
-      <div className="summary-container text-right">
-        <h2>Összefoglaló</h2>
-        <ul>
-          <li>Soroslás komponens</li>
-        </ul>
+      <div className="summary-container-text-right">
+        <h2 onClick={toggleDoneListVisibility}>Ami elkészült</h2>
+        {isDoneListVisible && (
+          <ul>
+            <li>
+              Főoldal ahol a látogató kezdeményezheti a belépést vagy a
+              regisztrációt
+            </li>
+            <li>A regisztrációs oldal</li>
+            <li>A bejelentkezési oldal</li>
+            <li>A felhasználó, illetve az admin dashboard</li>
+          </ul>
+        )}
+      </div>
+      <div className="summary-container-text-left">
+        <h2 onClick={toggleTodoListVisibility}>Ami még hátravan</h2>
+        {isTodoListVisible && (
+          <ul>
+            <li>...többek között</li>
+            <li>Sorsolás komponense és annak lefuttatása a szelvényeken</li>
+            <li>
+              Egyenleg módosulása a a szelvények megjátszásával, nyereménnyel,
+              bevétellel
+            </li>
+            <li>Refaktorálás</li>
+            <li>Stílus véglegesítése</li>
+            <li>Architektúra optimálisabb rétegelése</li>
+            <li>Hibamegelőzés finomhangolása</li>
+          </ul>
+        )}
+      </div>
+      <div className="summary-container-questions">
+        <h2 onClick={toggleQuestionsListVisibility}>Kérdések</h2>
+        {isQuestionsListVisible && (
+          <ul>
+            <li>
+              Kérdés lehetett az hogy az üzemeltető miként szimulálja a
+              játékost:
+            </li>
+            <li>
+              Ügy kezeltem a helyzetet hogy az admin technikai hiba esetén
+              tudjon szelvényt megjátszani a felhasználó nevében.
+            </li>
+          </ul>
+        )}
       </div>
     </>
   );
